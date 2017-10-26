@@ -84,9 +84,115 @@ else:
 
 ## Alternative for loop
 print "Counting..."
-
 for i in range(20):
   print i
 
 ## Repeat an action
-for i in range(3):
+hobbies = []
+for num in range(3):
+  hobby =  raw_input("Tell me one of your favorite hobbies: ")
+  hobbies.append(hobby)
+print hobbies
+
+## Print individual characters in a string
+thing = "spam!"
+for c in thing:
+  print c
+
+word = "eggs!"
+for c in word:
+  print c
+  
+## Print on the same line (, character)
+phrase = "A bird in the hand..."
+# Add your for loop
+for char in phrase:
+  if char == "A" or char =="a":
+    print "X",
+  else:
+    print char,
+#Don't delete this print statement!
+print
+
+## For loop with lists
+numbers  = [7, 9, 12, 54, 99]
+
+print "This list contains: "
+
+for num in numbers:
+  print num
+
+# Add your loop below!
+for num in numbers:
+  print num ** 2
+
+## For loop with dictionary (get the key to the dictionary)
+d = {'x': 9, 'y': 10, 'z': 20}
+for key in d:
+  if d[key] == 10:
+    print "This dictionary has the value 10!"
+
+d = {'a': 'apple', 'b': 'berry', 'c': 'cherry'}
+for key in d:
+  print "%s %s" %(key, d[key])
+
+## Indexing in the list (enumerate() gives index and item)
+choices = ['pizza', 'pasta', 'salad', 'nachos']
+
+print 'Your choices are:'
+for index, item in enumerate(choices):
+  print index + 1, item
+
+## Multiple lists iteration (zip() gives pairs of elements of two lists)
+list_a = [3, 9, 17, 15, 19]
+list_b = [2, 4, 8, 10, 30, 40, 50, 60, 70, 80, 90]
+
+# Print the larger of the two
+for a, b in zip(list_a, list_b):
+  if a >= b:
+    print a
+  else:
+    print b
+
+## For / else (else executed after for, if it ends normaly)
+fruits = ['banana', 'apple', 'orange', 'tomato', 'pear', 'grape']
+print 'You have...'
+for f in fruits:
+  if f == 'tomato':
+    print 'A tomato is not a fruit!' # (It actually is.)
+    break
+  print 'A', f
+else:
+  print 'A fine selection of fruits!'
+
+fruits = ['banana', 'apple', 'orange', 'tomato', 'pear', 'grape']
+
+# else will always run without the break
+print 'You have...'
+for f in fruits:
+  if f == 'tomato':
+    print 'A tomato is not a fruit!' # (It actually is.)
+    # break
+  else:
+  	print 'A', f
+else:
+  print 'A fine selection of fruits!'
+
+## Recap
+# Let's know each other
+favorites = []
+
+for num in range(3):
+  favorite =  raw_input("Tell me one of your favorite actors: ")
+  favorites.append(favorite)
+print favorites
+
+print 'Your favorite actors are...'
+for f in favorites:
+  if f == 'Penelope Cruz':
+    print '%s is Beautiful!' % (f)
+    # break
+  else:
+  	print 'I like %s!' % (f)
+else:
+  print 'I like them too!!'
